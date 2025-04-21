@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/figtree";
+import SpeedInsights from "@vercel/speed-insights/astro";
 import "../assets/global.css";
 import Footer from "../components/Footer.astro";
 ---
@@ -19,6 +20,7 @@ import Footer from "../components/Footer.astro";
   <body>
     <slot />
     <Footer />
+    <SpeedInsights />
   </body>
 </html>
 
