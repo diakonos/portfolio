@@ -15,12 +15,17 @@ import GraphQLLogo from "../assets/images/technologies/GraphQL@2x.png";
 import ReactNativeLogo from "../assets/images/technologies/React_Native@2x.png";
 import SwiftLogo from "../assets/images/technologies/Swift@2x.png";
 import { CSSSettings } from "../util/css";
+import ContentArea from "./ui/ContentArea.astro";
 ---
 
 <div class="mb-20 md:mb-30">
-  <h3 class="text-brand mx-7 mb-10 text-center text-4xl font-black lg:text-5xl">
-    Technologies I&rsquo;ve worked with
-  </h3>
+  <ContentArea
+    ><h3
+      class="text-brand mx-7 mb-10 text-center text-4xl font-black lg:text-5xl"
+    >
+      Technologies I&rsquo;ve worked with
+    </h3></ContentArea
+  >
   <div
     class="mx-auto mb-15 flex max-w-[600px] flex-wrap items-center justify-evenly gap-x-10 gap-y-5 px-5 md:gap-y-10 lg:max-w-[1000px] lg:px-20"
   >

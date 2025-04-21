@@ -1,7 +1,5 @@
 ---
-import { Image } from "astro:assets";
 import ContentArea from "./ui/ContentArea.astro";
-import Mailbox from "../assets/images/contact-mailbox.png";
 ---
 
 <div class="mb-20 md:mb-30">
@@ -9,18 +7,14 @@ import Mailbox from "../assets/images/contact-mailbox.png";
     Get in touch!
   </h3>
   <ContentArea class="px-5 lg:flex lg:gap-12 lg:px-20">
-    <div class="flex flex-col items-center justify-between">
-      <p class="mx-auto mb-8 max-w-100 text-center lg:mx-0 lg:mt-5 lg:mb-0">
-        Got a project you&rsquo;re working on? I&rsquo;d love to explore how I
-        can help! Contact me here:
+    <div class="flex flex-col items-center">
+      <p class="mx-auto mb-8 max-w-100 text-justify lg:mx-0 lg:mt-5 lg:mb-0">
+        Got a project you&rsquo;re working on? Need some advice on how to
+        kickstart your project? I&rsquo;d love to help! Send me a message and
+        I&rsquo;ll get back to you shortly.
+        <br />
+        <br />
       </p>
-      <Image
-        alt="An envelope entering a mailbox."
-        class="mb-[80px] hidden lg:block"
-        src={Mailbox}
-        width="250"
-        densities={[1, 2, 3]}
-      />
     </div>
     <div class="lg:w-2/3">
       <form
@@ -30,7 +24,7 @@ import Mailbox from "../assets/images/contact-mailbox.png";
         action="https://formspree.io/f/mgvkwodn"
       >
         <div class="w-full max-w-[500px] lg:max-w-none">
-          <label for="name" class="mb-2 block font-bold">Your name</label>
+          <label for="name" class="mb-2 block font-bold">Name</label>
           <input
             type="text"
             id="name"
@@ -40,7 +34,7 @@ import Mailbox from "../assets/images/contact-mailbox.png";
           />
         </div>
         <div class="w-full max-w-[500px] lg:max-w-none">
-          <label for="email" class="mb-2 block font-bold">Your email</label>
+          <label for="email" class="mb-2 block font-bold">Email</label>
           <input
             type="email"
             id="email"
