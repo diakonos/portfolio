@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import ReactLogo from "../assets/images/technologies/React@2x.png";
+import TSLogo from "../assets/images/technologies/TypeScript@2x.png";
+import NextLogo from "../assets/images/technologies/NextJS@2x.png";
+import AzureLogo from "../assets/images/technologies/Azure@2x.png";
+import NodeLogo from "../assets/images/technologies/NodeJS@2x.png";
+import AWSLogo from "../assets/images/technologies/AWS@2x.png";
+import JSLogo from "../assets/images/technologies/JavaScript@2x.png";
+import HTMLLogo from "../assets/images/technologies/HTML5@2x.png";
+import CSSLogo from "../assets/images/technologies/CSS3@2x.png";
+import MongoDBLogo from "../assets/images/technologies/MongoDB@2x.png";
+import SQLLogo from "../assets/images/technologies/SQL@2x.png";
+import GraphQLLogo from "../assets/images/technologies/GraphQL@2x.png";
+import ReactNativeLogo from "../assets/images/technologies/React_Native@2x.png";
+import SwiftLogo from "../assets/images/technologies/Swift@2x.png";
+import { CSSSettings } from "../util/css";
+---
+
+<div class="mb-20">
+  <h3 class="text-brand mx-7 mb-15 text-center text-4xl font-black lg:text-5xl">
+    Technologies I&rsquo;ve worked with
+  </h3>
+  <div
+    class="mx-auto mb-15 flex max-w-[600px] flex-wrap items-center justify-evenly gap-x-10 gap-y-5 px-5 lg:max-w-[1000px] lg:px-20"
+  >
+    <Image
+      alt="React logo"
+      src={ReactLogo}
+      widths={[150, 200]}
+      sizes={`(max-width: ${CSSSettings.breakpointLG}) 150px, 200px`}
+      class="max-w-[150px] lg:max-w-[200px]"
+    />
+    <Image
+      alt="TypeScript logo"
+      src={TSLogo}
+      widths={[50, 60]}
+      sizes={`(max-width: ${CSSSettings.breakpointLG}) 50px, 60px`}
+      class="max-w-[50px] lg:max-w-[60px]"
+    />
+    <Image
+      alt="Next.js logo"
+      src={NextLogo}
+      widths={[150, 200]}
+      sizes={`(max-width: ${CSSSettings.breakpointLG}) 150px, 200px`}
+      class="max-w-[150px] lg:max-w-[200px]"
+    />
+    <Image
+      alt="Microsoft Azure logo"
+      src={AzureLogo}
+      widths={[125, 175]}
+      sizes={`(max-width: ${CSSSettings.breakpointLG}) 125px, 175px`}
+      class="max-w-[125px] lg:max-w-[175px]"
+    />
+    <!-- </div> -->
+    <!-- <div class="mb-15 flex flex-wrap items-center justify-evenly lg:flex-nowrap"> -->
+    <Image alt="Node.js logo" src={NodeLogo} width="135" />
+    <Image alt="Amazong Web Services logo" src={AWSLogo} width="67" />
+    <Image alt="JavaScript logo" src={JSLogo} width="40" />
+    <Image alt="HTML5 logo" src={HTMLLogo} width="50" />
+    <Image alt="CSS logo" src={CSSLogo} width="40" />
+    <!-- </div> -->
+    <!-- <div class="flex flex-wrap items-center justify-evenly"> -->
+    <Image alt="Node.js logo" src={MongoDBLogo} width="160" />
+    <Image alt="Amazong Web Services logo" src={SQLLogo} width="75" />
+    <Image alt="JavaScript logo" src={GraphQLLogo} width="150" />
+    <Image alt="HTML5 logo" src={ReactNativeLogo} width="75" />
+    <Image alt="CSS logo" src={SwiftLogo} width="130" />
+  </div>
+</div>

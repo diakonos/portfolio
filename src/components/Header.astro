@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import ProfilePhoto from "../assets/images/Profile_Photo@3x.png";
+---
+
+<div class="mb-20">
+  <div class="bg-brand px-7 py-15 text-center text-white md:pb-5">
+    <h1 class="mb-5 text-6xl font-black md:ml-20 md:text-left">
+      Hey,
+      <br />
+      I&rsquo;m Justin
+    </h1>
+    <h2
+      class="mb-10 text-center text-3xl font-bold md:mr-20 md:mb-0 md:text-right md:text-2xl md:font-black lg:text-4xl"
+    >
+      web developer /<br />
+      full stack engineer /<br />
+      creator of digital experiences
+    </h2>
+    <div
+      class="mx-auto -mb-40 h-[200px] w-[200px] rounded-full border-10 border-white md:float-left md:-mt-20 md:ml-15"
+    >
+      <Image src={ProfilePhoto} alt="It's me!" width={200} height={200} />
+    </div>
+  </div>
+  <div class="mt-20 px-7 pt-15 md:pr-20">
+    <p
+      class="mx-auto max-w-[500px] text-center md:-mt-[125px] md:ml-[280px] md:text-left"
+    >
+      I&rsquo;m a software engineer from the US currently living in Hong Kong.
+      I&rsquo;ve been coding professionally for over 12 years and love creating.
+    </p>
+  </div>
+</div>

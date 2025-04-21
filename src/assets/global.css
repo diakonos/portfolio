@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #2a003f;
+  --font-sans: "Figtree Variable", "Helvetica", "Arial", "sans-serif";
+  --text-xs--line-height: 1.2;
+  --text-sm--line-height: 1.2;
+  --text-md--line-height: 1.2;
+  --text-lg--line-height: 1.2;
+  --text-xl--line-height: 1.2;
+  --text-2xl--line-height: 1.2;
+  --text-3xl--line-height: 1.2;
+  --text-4xl--line-height: 1.2;
+  --text-5xl--line-height: 1.2;
+  --text-6xl--line-height: 1.2;
+  --text-7xl--line-height: 1.2;
+  --text-8xl--line-height: 1.2;
+  --text-9xl--line-height: 1.2;
+}
+
+body {
+  font-size: 20px;
+}
+/* 
+h1 {
+  font-size: var(--text-6xl);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: var(--text-4xl);
+  font-weight: 900;
+}
+
+h3 {
+  font-size: var(--text-3xl);
+  font-weight: 900;
+} */
+
+body {
+  font-weight: 400;
+}
