@@ -1,12 +1,12 @@
 ---
-
+import ContentArea from "./ui/ContentArea.astro";
 ---
 
-<div class="mb-20">
+<div class="mb-20 md:mb-30">
   <h3 class="text-brand mx-7 mb-10 text-center text-4xl font-black lg:text-5xl">
     Get in touch!
   </h3>
-  <div class="mx-7 lg:mx-20 lg:flex lg:gap-12">
+  <ContentArea class="px-5 lg:flex lg:gap-12 lg:px-20">
     <p class="mx-auto mb-8 max-w-100 text-center lg:mx-0 lg:mt-5 lg:mb-0">
       Got a project you&rsquo;re working on? I&rsquo;d love to explore how I can
       help! Contact me here:
@@ -50,13 +50,13 @@
         </div>
         <button
           type="submit"
-          class="bg-brand hover:bg-brand/90 focus:ring-brand lg:max-w-nonee w-full max-w-[500px] rounded-lg px-6 py-3 font-medium text-white focus:ring-2 focus:ring-offset-2 focus:outline-none"
+          class="bg-brand hover:bg-brand/90 focus:ring-brand lg:max-w-nonee w-full max-w-[400px] rounded-lg px-6 py-3 font-medium text-white focus:ring-2 focus:ring-offset-2 focus:outline-none lg:max-w-[300px]"
         >
           Send message
         </button>
       </form>
     </div>
-  </div>
+  </ContentArea>
 </div>
 
 <script>
