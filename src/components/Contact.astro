@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import ContentArea from "./ui/ContentArea.astro";
+import Mailbox from "../assets/images/contact-mailbox.png";
 ---
 
 <div class="mb-20 md:mb-30">
@@ -7,10 +9,18 @@ import ContentArea from "./ui/ContentArea.astro";
     Get in touch!
   </h3>
   <ContentArea class="px-5 lg:flex lg:gap-12 lg:px-20">
-    <p class="mx-auto mb-8 max-w-100 text-center lg:mx-0 lg:mt-5 lg:mb-0">
-      Got a project you&rsquo;re working on? I&rsquo;d love to explore how I can
-      help! Contact me here:
-    </p>
+    <div class="flex flex-col items-center justify-between">
+      <p class="mx-auto mb-8 max-w-100 text-center lg:mx-0 lg:mt-5 lg:mb-0">
+        Got a project you&rsquo;re working on? I&rsquo;d love to explore how I
+        can help! Contact me here:
+      </p>
+      <Image
+        alt="An envelope entering a mailbox."
+        class="mb-[80px] hidden lg:block"
+        src={Mailbox}
+        width="250"
+      />
+    </div>
     <div class="lg:w-2/3">
       <form
         class="flex flex-col items-center gap-6"
