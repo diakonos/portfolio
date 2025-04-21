@@ -1,19 +1,19 @@
 ---
 import { Image } from "astro:assets";
-import ReactLogo from "../assets/images/technologies/React@2x.png";
-import TSLogo from "../assets/images/technologies/TypeScript@2x.png";
-import NextLogo from "../assets/images/technologies/NextJS@2x.png";
-import AzureLogo from "../assets/images/technologies/Azure@2x.png";
-import NodeLogo from "../assets/images/technologies/NodeJS@2x.png";
-import AWSLogo from "../assets/images/technologies/AWS@2x.png";
-import JSLogo from "../assets/images/technologies/JavaScript@2x.png";
-import HTMLLogo from "../assets/images/technologies/HTML5@2x.png";
-import CSSLogo from "../assets/images/technologies/CSS3@2x.png";
-import MongoDBLogo from "../assets/images/technologies/MongoDB@2x.png";
-import SQLLogo from "../assets/images/technologies/SQL@2x.png";
-import GraphQLLogo from "../assets/images/technologies/GraphQL@2x.png";
-import ReactNativeLogo from "../assets/images/technologies/React_Native@2x.png";
-import SwiftLogo from "../assets/images/technologies/Swift@2x.png";
+import ReactLogo from "../assets/images/technologies/React@3x.png";
+import TSLogo from "../assets/images/technologies/TypeScript@3x.png";
+import NextLogo from "../assets/images/technologies/NextJS@3x.png";
+import AzureLogo from "../assets/images/technologies/Azure@3x.png";
+import NodeLogo from "../assets/images/technologies/NodeJS@3x.png";
+import AWSLogo from "../assets/images/technologies/AWS@3x.png";
+import JSLogo from "../assets/images/technologies/JavaScript@3x.png";
+import HTMLLogo from "../assets/images/technologies/HTML5@3x.png";
+import CSSLogo from "../assets/images/technologies/CSS3@3x.png";
+import MongoDBLogo from "../assets/images/technologies/MongoDB@3x.png";
+import SQLLogo from "../assets/images/technologies/SQL@3x.png";
+import GraphQLLogo from "../assets/images/technologies/GraphQL@3x.png";
+import ReactNativeLogo from "../assets/images/technologies/React_Native@3x.png";
+import SwiftLogo from "../assets/images/technologies/Swift@3x.png";
 import { CSSSettings } from "../util/css";
 import ContentArea from "./ui/ContentArea.astro";
 ---
@@ -32,40 +32,70 @@ import ContentArea from "./ui/ContentArea.astro";
     <Image
       alt="React logo"
       src={ReactLogo}
-      widths={[150, 200]}
+      densities={[1, 2, 3]}
       sizes={`(max-width: ${CSSSettings.breakpointLG}) 150px, 200px`}
       class="max-w-[150px] lg:max-w-[200px]"
     />
     <Image
       alt="TypeScript logo"
       src={TSLogo}
-      widths={[50, 60]}
+      densities={[1, 2, 3]}
       sizes={`(max-width: ${CSSSettings.breakpointLG}) 50px, 60px`}
       class="max-w-[50px] lg:max-w-[60px]"
     />
     <Image
       alt="Next.js logo"
       src={NextLogo}
-      widths={[150, 200]}
+      densities={[1, 2, 3]}
       sizes={`(max-width: ${CSSSettings.breakpointLG}) 150px, 200px`}
       class="max-w-[150px] lg:max-w-[200px]"
     />
     <Image
       alt="Microsoft Azure logo"
       src={AzureLogo}
-      widths={[125, 175]}
+      densities={[1, 2, 3]}
       sizes={`(max-width: ${CSSSettings.breakpointLG}) 125px, 175px`}
       class="max-w-[125px] lg:max-w-[175px]"
     />
-    <Image alt="Node.js logo" src={NodeLogo} width="135" />
-    <Image alt="Amazon Web Services logo" src={AWSLogo} width="67" />
-    <Image alt="MongoDB logo" src={MongoDBLogo} width="160" />
-    <Image alt="SQL logo" src={SQLLogo} width="75" />
-    <Image alt="GraphQL logo" src={GraphQLLogo} width="150" />
-    <Image alt="React Native logo" src={ReactNativeLogo} width="75" />
-    <Image alt="Swift logo" src={SwiftLogo} width="130" />
-    <Image alt="JavaScript logo" src={JSLogo} width="40" />
-    <Image alt="HTML5 logo" src={HTMLLogo} width="50" />
-    <Image alt="CSS logo" src={CSSLogo} width="40" />
+    <Image
+      alt="Node.js logo"
+      src={NodeLogo}
+      width="135"
+      densities={[1, 2, 3]}
+    />
+    <Image
+      alt="Amazon Web Services logo"
+      src={AWSLogo}
+      width="67"
+      densities={[1, 2, 3]}
+    />
+    <Image
+      alt="MongoDB logo"
+      src={MongoDBLogo}
+      width="160"
+      densities={[1, 2, 3]}
+    />
+    <Image alt="SQL logo" src={SQLLogo} width="75" densities={[1, 2, 3]} />
+    <Image
+      alt="GraphQL logo"
+      src={GraphQLLogo}
+      width="150"
+      densities={[1, 2, 3]}
+    />
+    <Image
+      alt="React Native logo"
+      src={ReactNativeLogo}
+      width="75"
+      densities={[1, 2, 3]}
+    />
+    <Image alt="Swift logo" src={SwiftLogo} width="130" densities={[1, 2, 3]} />
+    <Image
+      alt="JavaScript logo"
+      src={JSLogo}
+      width="40"
+      densities={[1, 2, 3]}
+    />
+    <Image alt="HTML5 logo" src={HTMLLogo} width="50" densities={[1, 2, 3]} />
+    <Image alt="CSS logo" src={CSSLogo} width="40" densities={[1, 2, 3]} />
   </div>
 </div>
