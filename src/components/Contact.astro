@@ -1,5 +1,5 @@
 ---
-// Add any necessary form handling logic here
+
 ---
 
 <div class="mb-20">
@@ -12,23 +12,28 @@
       help! Contact me here:
     </p>
     <div class="lg:w-2/3">
-      <form class="flex flex-col items-center gap-6">
-        <div class="w-full max-w-[500px] lg:max-w-none">
-          <label for="email" class="mb-2 block font-bold">Your email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            class="focus:border-brand focus:ring-brand w-full rounded-lg border border-gray-300 p-3 focus:ring-1 focus:outline-none"
-          />
-        </div>
+      <form
+        class="flex flex-col items-center gap-6"
+        method="POST"
+        id="contact-form"
+        action="https://formspree.io/f/mgvkwodn"
+      >
         <div class="w-full max-w-[500px] lg:max-w-none">
           <label for="name" class="mb-2 block font-bold">Your name</label>
           <input
             type="text"
             id="name"
             name="name"
+            required
+            class="focus:border-brand focus:ring-brand w-full rounded-lg border border-gray-300 p-3 focus:ring-1 focus:outline-none"
+          />
+        </div>
+        <div class="w-full max-w-[500px] lg:max-w-none">
+          <label for="email" class="mb-2 block font-bold">Your email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
             required
             class="focus:border-brand focus:ring-brand w-full rounded-lg border border-gray-300 p-3 focus:ring-1 focus:outline-none"
           />
@@ -53,3 +58,10 @@
     </div>
   </div>
 </div>
+
+<script>
+  window.onbeforeunload = () => {
+    const form = document.getElementById("contact-form") as HTMLFormElement;
+    form.reset();
+  };
+</script>
