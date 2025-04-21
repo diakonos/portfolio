@@ -22,7 +22,13 @@ import ProfilePhoto from "../assets/images/Profile_Photo@3x.png";
       <div
         class="mx-auto -mb-40 h-[200px] w-[200px] rounded-full border-10 border-white md:float-left md:-mt-20 md:ml-15"
       >
-        <Image src={ProfilePhoto} alt="It's me!" width={200} height={200} />
+        <Image
+          src={ProfilePhoto}
+          alt="It's me!"
+          width={180}
+          height={180}
+          densities={[1, 2, 3]}
+        />
       </div>
     </ContentArea>
   </div>
