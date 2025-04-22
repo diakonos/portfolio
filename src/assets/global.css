@@ -3,6 +3,7 @@
 @theme {
   --breakpoint-md: 726px;
   --color-brand: #2a003f;
+  --color-brand-900: #0e0016;
   --font-sans: "Figtree Variable", "Helvetica", "Arial", "sans-serif";
   --text-xs--line-height: 1.2;
   --text-sm--line-height: 1.2;
@@ -26,12 +27,13 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #0e0016;
+    background-color: var(--color-brand-900);
     color: white;
   }
 
   input,
   textarea {
     background-color: white;
+    color: black;
   }
 }
