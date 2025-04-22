@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import ProjectImageOK1 from "../assets/images/project_ok_1.png";
 import ProjectImageOK2 from "../assets/images/project_ok_2.png";
+import ProjectImageOK3 from "../assets/images/project_ok_3.png";
 ---
 
 <div class="mx-5 flex flex-col justify-center gap-5 md:mx-20 lg:flex-row">
@@ -12,22 +13,94 @@ import ProjectImageOK2 from "../assets/images/project_ok_2.png";
       A globally-deployed supply chain management platform
     </p>
     <p class="mx-auto max-w-[500px] text-left md:text-left lg:mx-0">
-      As Senior Frontend Engineer, I worked with React + Next.js for the
-      frontend, automated deployments with Docker and Azure DevOps, and used a
-      combination of Azure Front Door and Azure App Service to deploy the
-      application globally with low latency.
+      In my role as Senior Frontend Engineer, I built the frontend with React
+      and Next.js, implemented automated CI/CD pipelines using Docker and Azure
+      DevOps, and deployed the application globally with low latency using Azure
+      Front Door and Azure App Service.
     </p>
   </div>
-  <div class="relative order-1 flex flex-col justify-center lg:order-2">
+  <div class="pic relative order-1 flex flex-col justify-center lg:order-2">
     <Image
-      alt="OK Systems Limited homepage"
+      alt="OK Systems homepage"
       src={ProjectImageOK1}
-      class="relative top-0 left-0 z-2 mx-auto mb-10 drop-shadow-md lg:mx-0 lg:mb-0"
+      class="pi1 relative top-0 left-0 z-2 mx-auto mb-10 drop-shadow-md lg:mx-0 lg:mb-0"
     />
     <Image
-      alt="OK Systems Limited product editor"
+      alt="OK Systems product editor"
       src={ProjectImageOK2}
-      class="left-20 z-1 hidden scale-80 drop-shadow-sm lg:absolute lg:block"
+      class="pi2 drop-shadow-sm"
+    />
+    <Image
+      alt="OK Systems dashboard"
+      src={ProjectImageOK3}
+      class="pi3 drop-shadow-sm"
     />
   </div>
 </div>
+
+<style>
+  .pic {
+    position: relative;
+  }
+
+  .pi1 {
+    animation: 15000ms ease-in-out 0ms infinite carousel;
+  }
+
+  .pi2,
+  .pi3 {
+    display: none;
+    position: absolute;
+  }
+
+  @media (width >= 48rem) {
+    .pi2 {
+      display: block;
+      animation: 15000ms ease-in-out -5000ms infinite carousel;
+      transform: scale3d(0.9, 0.9, 0.9) translateX(10%);
+    }
+    .pi3 {
+      display: block;
+      animation: 15000ms ease-in-out -10000ms infinite carousel;
+      transform: scale3d(0.8, 0.8, 0.8) translateX(20%);
+    }
+  }
+
+  @keyframes carousel {
+    from {
+      transform: scale3d(1, 1, 1) translateX(0);
+      z-index: 3;
+      opacity: 1;
+    }
+    28% {
+      transform: scale3d(1, 1, 1) translateX(0);
+      z-index: 3;
+      opacity: 1;
+    }
+    35% {
+      transform: scale3d(0.8, 0.8, 0.8) translateX(20%);
+      z-index: 1;
+      opacity: 0.33;
+    }
+    63% {
+      transform: scale3d(0.8, 0.8, 0.8) translateX(20%);
+      z-index: 1;
+      opacity: 0.33;
+    }
+    70% {
+      transform: scale3d(0.9, 0.9, 0.9) translateX(10%);
+      z-index: 2;
+      opacity: 0.66;
+    }
+    93% {
+      transform: scale3d(0.9, 0.9, 0.9) translateX(10%);
+      z-index: 2;
+      opacity: 0.66;
+    }
+    to {
+      transform: scale3d(1, 1, 1) translateX(0);
+      z-index: 3;
+      opacity: 1;
+    }
+  }
+</style>
