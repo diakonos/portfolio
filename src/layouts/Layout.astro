@@ -3,6 +3,9 @@ import "@fontsource-variable/figtree";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import "../assets/global.css";
 import Footer from "../components/Footer.astro";
+import Favicon from "../assets/images/favicon.ico";
+import Favicon16 from "../assets/images/favicon-16x16.png";
+import Favicon32 from "../assets/images/favicon-32x32.png";
 ---
 
 <!doctype html>
@@ -15,6 +18,9 @@ import Footer from "../components/Footer.astro";
       name="description"
       content="Justin Ling's portfolio website. Justin Ling is a software engineer from the US based in Hong Kong. He's been coding professionally for over 12 years and loves creating."
     />
+    <link rel="icon" type="image/png" sizes="32x32" href={Favicon32.src} />
+    <link rel="icon" type="image/png" sizes="16x16" href={Favicon16.src} />
+    <link rel="icon" type="image/png" href={Favicon} />
     <title>Justin Ling</title>
     <script
       defer
