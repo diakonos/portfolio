@@ -1,29 +1,37 @@
 ---
 import { Image } from "astro:assets";
 import GitHubLogo from "../assets/images/github-mark.png";
+import GitHubLogoDark from "../assets/images/github-mark-white.png";
 import LinkedInLogo from "../assets/images/LI-In-Bug.png";
 ---
 
 <footer class="py-5 text-center text-sm text-gray-600 dark:text-gray-300">
   <div class="mb-5 flex items-center justify-center gap-5">
-    <a href="https://github.com/diakonos"
-      ><Image
+    <a href="https://github.com/diakonos">
+      <Image
         alt="GitHub logo"
         src={GitHubLogo}
         height="35"
         width="35"
-        class="inline align-middle"
-      /></a
-    >
-    <a href="https://www.linkedin.com/in/justin-c-ling/"
-      ><Image
+        class="inline align-middle dark:hidden"
+      />
+      <Image
+        alt="GitHub logo"
+        src={GitHubLogoDark}
+        height="35"
+        width="35"
+        class="hidden align-middle dark:inline"
+      />
+    </a>
+    <a href="https://www.linkedin.com/in/justin-c-ling/">
+      <Image
         alt="LinkedIn Logo"
         src={LinkedInLogo}
         width="40"
         height="40"
         class="inline align-middle"
-      /></a
-    >
+      />
+    </a>
   </div>
   <p>&copy; {new Date().getFullYear()} Justin Ling. All rights reserved.</p>
 </footer>
