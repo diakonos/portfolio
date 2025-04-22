@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-md: 726px;
   --color-brand: #2a003f;
   --font-sans: "Figtree Variable", "Helvetica", "Arial", "sans-serif";
   --text-xs--line-height: 1.2;
