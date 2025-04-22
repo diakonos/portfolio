@@ -19,11 +19,13 @@ import ProjectImageOK3 from "../assets/images/project_ok_3.png";
       Front Door and Azure App Service.
     </p>
   </div>
-  <div class="pic relative order-1 flex flex-col justify-center lg:order-2">
+  <div
+    class="pic relative order-1 mb-5 flex items-center justify-center lg:order-2 lg:mb-0"
+  >
     <Image
       alt="OK Systems homepage"
       src={ProjectImageOK1}
-      class="pi1 relative top-0 left-0 z-2 mx-auto mb-10 drop-shadow-md lg:mx-0 lg:mb-0"
+      class="pi1 drop-shadow-md"
     />
     <Image
       alt="OK Systems product editor"
@@ -43,17 +45,16 @@ import ProjectImageOK3 from "../assets/images/project_ok_3.png";
     position: relative;
   }
 
-  .pi1 {
-    animation: 15000ms ease-in-out 0ms infinite carousel;
-  }
-
   .pi2,
   .pi3 {
     display: none;
     position: absolute;
   }
 
-  @media (width >= 48rem) {
+  @media (width >= 64rem) {
+    .pi1 {
+      animation: 15000ms ease-in-out 0ms infinite carousel;
+    }
     .pi2 {
       display: block;
       animation: 15000ms ease-in-out -5000ms infinite carousel;
