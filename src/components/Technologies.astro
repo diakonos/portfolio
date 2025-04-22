@@ -1,11 +1,15 @@
 ---
 import { Image } from "astro:assets";
 import ReactLogo from "../assets/images/technologies/React@3x.png";
+import ReactDarkLogo from "../assets/images/technologies/React_dark@3x.png";
 import TSLogo from "../assets/images/technologies/TypeScript@3x.png";
 import NextLogo from "../assets/images/technologies/NextJS@3x.png";
+import NextDarkLogo from "../assets/images/technologies/NextJS_dark@3x.png";
 import AzureLogo from "../assets/images/technologies/Azure@3x.png";
 import NodeLogo from "../assets/images/technologies/NodeJS@3x.png";
+import NodeDarkLogo from "../assets/images/technologies/NodeJS_dark@3x.png";
 import AWSLogo from "../assets/images/technologies/AWS@3x.png";
+import AWSDarkLogo from "../assets/images/technologies/AWS_dark@3x.png";
 import JSLogo from "../assets/images/technologies/JavaScript@3x.png";
 import HTMLLogo from "../assets/images/technologies/HTML5@3x.png";
 import CSSLogo from "../assets/images/technologies/CSS3@3x.png";
@@ -14,6 +18,7 @@ import SQLLogo from "../assets/images/technologies/SQL@3x.png";
 import GraphQLLogo from "../assets/images/technologies/GraphQL@3x.png";
 import ReactNativeLogo from "../assets/images/technologies/React_Native@3x.png";
 import SwiftLogo from "../assets/images/technologies/Swift@3x.png";
+import SwiftDarkLogo from "../assets/images/technologies/Swift_dark@3x.png";
 import { CSSSettings } from "../util/css";
 import ContentArea from "./ui/ContentArea.astro";
 ---
@@ -21,7 +26,7 @@ import ContentArea from "./ui/ContentArea.astro";
 <div class="mb-20 md:mb-30">
   <ContentArea
     ><h3
-      class="text-brand mx-7 mb-10 text-center text-4xl font-black lg:text-5xl"
+      class="text-brand mx-7 mb-10 text-center text-4xl font-black lg:text-5xl dark:text-white"
     >
       Technologies I&rsquo;ve worked with
     </h3></ContentArea
@@ -34,7 +39,14 @@ import ContentArea from "./ui/ContentArea.astro";
       src={ReactLogo}
       densities={[1, 2, 3]}
       sizes={`(max-width: ${CSSSettings.breakpointLG}) 150px, 200px`}
-      class="max-w-[150px] lg:max-w-[200px]"
+      class="max-w-[150px] lg:max-w-[200px] dark:hidden"
+    />
+    <Image
+      alt="React logo"
+      src={ReactDarkLogo}
+      densities={[1, 2, 3]}
+      sizes={`(max-width: ${CSSSettings.breakpointLG}) 150px, 200px`}
+      class="hidden max-w-[150px] lg:max-w-[200px] dark:block"
     />
     <Image
       alt="TypeScript logo"
@@ -48,7 +60,14 @@ import ContentArea from "./ui/ContentArea.astro";
       src={NextLogo}
       densities={[1, 2, 3]}
       sizes={`(max-width: ${CSSSettings.breakpointLG}) 150px, 200px`}
-      class="max-w-[150px] lg:max-w-[200px]"
+      class="max-w-[150px] lg:max-w-[200px] dark:hidden"
+    />
+    <Image
+      alt="Next.js logo"
+      src={NextDarkLogo}
+      densities={[1, 2, 3]}
+      sizes={`(max-width: ${CSSSettings.breakpointLG}) 150px, 200px`}
+      class="hidden max-w-[150px] lg:max-w-[200px] dark:block"
     />
     <Image
       alt="Microsoft Azure logo"
@@ -59,7 +78,15 @@ import ContentArea from "./ui/ContentArea.astro";
     />
     <Image
       alt="Node.js logo"
+      class="dark:hidden"
       src={NodeLogo}
+      width="135"
+      densities={[1, 2, 3]}
+    />
+    <Image
+      alt="Node.js logo"
+      class="hidden dark:block"
+      src={NodeDarkLogo}
       width="135"
       densities={[1, 2, 3]}
     />
@@ -68,6 +95,14 @@ import ContentArea from "./ui/ContentArea.astro";
       src={AWSLogo}
       width="67"
       densities={[1, 2, 3]}
+      class="dark:hidden"
+    />
+    <Image
+      alt="Amazon Web Services logo"
+      src={AWSDarkLogo}
+      width="67"
+      densities={[1, 2, 3]}
+      class="hidden dark:block"
     />
     <Image
       alt="MongoDB logo"
@@ -88,7 +123,20 @@ import ContentArea from "./ui/ContentArea.astro";
       width="75"
       densities={[1, 2, 3]}
     />
-    <Image alt="Swift logo" src={SwiftLogo} width="130" densities={[1, 2, 3]} />
+    <Image
+      alt="Swift logo"
+      src={SwiftLogo}
+      width="130"
+      densities={[1, 2, 3]}
+      class="dark:hidden"
+    />
+    <Image
+      alt="Swift logo"
+      src={SwiftDarkLogo}
+      width="130"
+      densities={[1, 2, 3]}
+      class="hidden dark:block"
+    />
     <Image
       alt="JavaScript logo"
       src={JSLogo}

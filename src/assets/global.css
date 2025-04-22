@@ -20,23 +20,17 @@
 
 body {
   font-size: 20px;
-}
-/* 
-h1 {
-  font-size: var(--text-6xl);
-  font-weight: 900;
-}
-
-h2 {
-  font-size: var(--text-4xl);
-  font-weight: 900;
-}
-
-h3 {
-  font-size: var(--text-3xl);
-  font-weight: 900;
-} */
-
-body {
   font-weight: 400;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0e0016;
+    color: white;
+  }
+
+  input,
+  textarea {
+    background-color: white;
+  }
 }
