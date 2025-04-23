@@ -1,5 +1,6 @@
 import { useEffect, useState } from "preact/hooks";
 import arrow from "@/assets/icons/arrow.png";
+import arrowLight from "@/assets/icons/arrow_light.png";
 
 type CarouselSlideIndicatorsProps = {
   carouselId: string;
@@ -52,29 +53,49 @@ export default function CarouselSlideIndicators({
 
   return (
     <div class="mt-10 flex items-center justify-center gap-5">
-      <img
-        alt="Previous slide"
-        src={arrow.src}
-        width="36"
-        onClick={() => scrollToSlide(currentIndex - 1)}
+      <button
         class={`${currentIndex <= 0 ? "opacity-50" : "cursor-pointer hover:opacity-70"} mr-10`}
-      />
+        onClick={() => scrollToSlide(currentIndex - 1)}
+      >
+        <img
+          alt="Previous slide"
+          src={arrow.src}
+          width="36"
+          class="dark:hidden"
+        />
+        <img
+          alt="Previous slide"
+          src={arrowLight.src}
+          width="36"
+          class="hidden dark:block"
+        />
+      </button>
       {Array.from({ length: slideCount }, (_, index) => (
         <div
           key={index}
-          class={`carousel-dot h-2 w-2 cursor-pointer rounded-full transition-all duration-300 ease-in-out ${
-            index === currentIndex ? "bg-brand" : "bg-gray-400"
+          class={`carousel-dot h-2 w-2 cursor-pointer rounded-full bg-black transition-all duration-300 ease-in-out dark:bg-white ${
+            index === currentIndex ? "opacity-100" : "opacity-50"
           }`}
           onClick={() => scrollToSlide(index)}
         ></div>
       ))}
-      <img
-        alt="Next slide"
-        src={arrow.src}
-        width="36"
+      <button
+        class={`${currentIndex >= slideCount - 1 ? "opacity-50" : "cursor-pointer hover:opacity-70"} ml-10`}
         onClick={() => scrollToSlide(currentIndex + 1)}
-        class={`${currentIndex >= slideCount - 1 ? "opacity-50" : "cursor-pointer hover:opacity-70"} ml-10 rotate-180`}
-      />
+      >
+        <img
+          alt="Next slide"
+          src={arrow.src}
+          width="36"
+          class="rotate-180 dark:hidden"
+        />
+        <img
+          alt="Next slide"
+          src={arrowLight.src}
+          width="36"
+          class="hidden rotate-180 dark:block"
+        />
+      </button>
     </div>
   );
 }
