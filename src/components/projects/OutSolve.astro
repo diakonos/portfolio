@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import CarouselSlide from "@/components/ui/CarouselSlide.astro";
+import BodyHeader from "@/components/ui/BodyHeader.astro";
+import OutSolveImage from "@/assets/images/OutSolve_diagram.png";
+---
+
+<CarouselSlide
+  class="mx-5 flex flex-col items-center gap-5 md:mx-20 lg:flex-row"
+>
+  <div class="order-2 max-w-[500px] lg:order-1">
+    <BodyHeader class="mb-5">Microservices and data visualization</BodyHeader>
+    <p>
+      To support the client's move to the cloud, I created microservices with
+      .NET Core and Node.js for their report generation pipeline. These services
+      were deployed to Azure via GitHub Actions and Terraform. I also used
+      jsreport to build the reports which ran statistical analyses and
+      visualized data on charts.
+    </p>
+  </div>
+  <div class="order-1 lg:order-2 lg:mb-10">
+    <Image
+      alt="OutSolve"
+      src={OutSolveImage}
+      class="w-full max-w-[550px]"
+      densities={[1, 2, 3]}
+    />
+  </div>
+</CarouselSlide>

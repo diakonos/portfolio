@@ -1,0 +1,21 @@
+---
+const { class: className = "", ...props } = Astro.props;
+---
+
+<div
+  {...props}
+  class={`carousel flex snap-x snap-mandatory overflow-x-scroll ${className}`}
+>
+  <slot />
+</div>
+
+<style>
+  .carousel {
+    padding-left: calc(
+      (100% - min(1200px, calc(100% - var(--spacing) * 10))) / 2
+    );
+    padding-right: calc(
+      (100% - min(1200px, calc(100% - var(--spacing) * 10))) / 2
+    );
+  }
+</style>

@@ -1,6 +1,8 @@
 ---
-import ProjectExample from "./ProjectExample.astro";
-import ContentArea from "./ui/ContentArea.astro";
+import Carousel from "@/components/ui/Carousel.astro";
+import ContentArea from "@/components/ui/ContentArea.astro";
+import OKSystems from "@/components/projects/OKSystems.astro";
+import OutSolve from "@/components/projects/OutSolve.astro";
 ---
 
 <div class="mb-20 md:mb-30">
@@ -11,5 +13,8 @@ import ContentArea from "./ui/ContentArea.astro";
       Some of the things I&rsquo;ve helped build
     </h3>
   </ContentArea>
-  <ProjectExample />
+  <Carousel>
+    <OKSystems />
+    <OutSolve />
+  </Carousel>
 </div>

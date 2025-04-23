@@ -1,18 +1,22 @@
 ---
 import { Image } from "astro:assets";
-import ProjectImageOK1 from "../assets/images/project_ok_1.png";
-import ProjectImageOK2 from "../assets/images/project_ok_2.png";
-import ProjectImageOK3 from "../assets/images/project_ok_3.png";
+import ProjectImageOK1 from "@/assets/images/project_ok_1.png";
+import ProjectImageOK2 from "@/assets/images/project_ok_2.png";
+import ProjectImageOK3 from "@/assets/images/project_ok_3.png";
+import CarouselSlide from "@/components/ui/CarouselSlide.astro";
+import BodyHeader from "@/components/ui/BodyHeader.astro";
 ---
 
-<div class="mx-5 flex flex-col justify-center gap-5 md:mx-20 lg:flex-row">
+<CarouselSlide
+  class="mx-5 flex flex-col justify-center gap-5 md:mx-20 lg:flex-row"
+>
   <div class="order-2 flex flex-col justify-center lg:order-1">
-    <p
-      class="mx-auto mb-5 max-w-[500px] text-left text-3xl font-bold md:text-left lg:mx-0 lg:text-4xl"
+    <BodyHeader
+      class="mx-auto mb-5 max-w-[500px] text-3xl font-bold lg:mx-0 lg:text-4xl"
     >
       A globally-deployed supply chain management platform
-    </p>
-    <p class="mx-auto max-w-[500px] text-left md:text-left lg:mx-0">
+    </BodyHeader>
+    <p class="mx-auto max-w-[500px] lg:mx-0">
       In my role as Senior Frontend Engineer, I built the frontend with React
       and Next.js, implemented automated CI/CD pipelines using Docker and Azure
       DevOps, and deployed the application globally with low latency using Azure
@@ -38,7 +42,7 @@ import ProjectImageOK3 from "../assets/images/project_ok_3.png";
       class="pi3 drop-shadow-sm"
     />
   </div>
-</div>
+</CarouselSlide>
 
 <style>
   .pic {
