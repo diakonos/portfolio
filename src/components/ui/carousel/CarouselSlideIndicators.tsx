@@ -1,4 +1,5 @@
 import { useEffect, useState } from "preact/hooks";
+import arrow from "@/assets/icons/arrow.png";
 
 type CarouselSlideIndicatorsProps = {
   carouselId: string;
@@ -9,6 +10,21 @@ export default function CarouselSlideIndicators({
 }: CarouselSlideIndicatorsProps) {
   const [slideCount, setSlideCount] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const scrollToSlide = (index: number) => {
+    if (index < 0 || index >= slideCount) {
+      return;
+    }
+    const carousel = document.getElementById(carouselId);
+    const viewport = carousel?.querySelector(".carousel-viewport");
+    if (carousel && viewport) {
+      const slideWidth = carousel.clientWidth;
+      viewport.scrollTo({
+        left: index * slideWidth,
+        behavior: "smooth",
+      });
+    }
+  };
 
   useEffect(() => {
     const carousel = document.getElementById(carouselId);
@@ -35,25 +51,30 @@ export default function CarouselSlideIndicators({
   }, [carouselId]);
 
   return (
-    <div class="mt-10 flex justify-center gap-2">
+    <div class="mt-10 flex items-center justify-center gap-5">
+      <img
+        alt="Previous slide"
+        src={arrow.src}
+        width="36"
+        onClick={() => scrollToSlide(currentIndex - 1)}
+        class={`${currentIndex <= 0 ? "opacity-50" : "cursor-pointer hover:opacity-70"} mr-10`}
+      />
       {Array.from({ length: slideCount }, (_, index) => (
         <div
           key={index}
           class={`carousel-dot h-2 w-2 cursor-pointer rounded-full transition-all duration-300 ease-in-out ${
             index === currentIndex ? "bg-brand" : "bg-gray-400"
           }`}
-          onClick={() => {
-            const carousel = document.getElementById(carouselId);
-            if (carousel) {
-              const slideWidth = carousel.clientWidth;
-              carousel.scrollTo({
-                left: index * slideWidth,
-                behavior: "smooth",
-              });
-            }
-          }}
+          onClick={() => scrollToSlide(index)}
         ></div>
       ))}
+      <img
+        alt="Next slide"
+        src={arrow.src}
+        width="36"
+        onClick={() => scrollToSlide(currentIndex + 1)}
+        class={`${currentIndex >= slideCount - 1 ? "opacity-50" : "cursor-pointer hover:opacity-70"} ml-10 rotate-180`}
+      />
     </div>
   );
 }
