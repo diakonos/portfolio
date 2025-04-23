@@ -2,15 +2,17 @@
 const { class: className = "", ...props } = Astro.props;
 ---
 
-<div
-  {...props}
-  class={`carousel flex snap-x snap-mandatory overflow-x-scroll ${className}`}
->
-  <slot />
+<div {...props} class={`carousel ${className}`}>
+  <div class="carousel-viewport flex snap-x snap-mandatory overflow-x-scroll">
+    <slot />
+  </div>
+  <div>
+    <slot name="dots" />
+  </div>
 </div>
 
 <style>
-  .carousel {
+  .carousel-viewport {
     padding-left: calc(
       (100% - min(1200px, calc(100% - var(--spacing) * 10))) / 2
     );
@@ -19,7 +21,7 @@ const { class: className = "", ...props } = Astro.props;
     );
   }
 
-  .carousel::after {
+  .carousel-viewport::after {
     content: "";
     border-right: 1px solid transparent;
   }

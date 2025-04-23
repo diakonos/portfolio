@@ -1,8 +1,9 @@
 ---
-import Carousel from "@/components/ui/Carousel.astro";
+import Carousel from "@/components/ui/carousel/Carousel.astro";
 import ContentArea from "@/components/ui/ContentArea.astro";
 import OKSystems from "@/components/projects/OKSystems.astro";
 import OutSolve from "@/components/projects/OutSolve.astro";
+import CarouselSlideIndicators from "@/components/ui/carousel/CarouselSlideIndicators";
 ---
 
 <div class="mb-20 md:mb-30">
@@ -13,8 +14,13 @@ import OutSolve from "@/components/projects/OutSolve.astro";
       Some of the things I&rsquo;ve helped build
     </h3>
   </ContentArea>
-  <Carousel>
+  <Carousel id="projects-carousel">
     <OKSystems />
     <OutSolve />
+    <CarouselSlideIndicators
+      carouselId="projects-carousel"
+      slot="dots"
+      client:load
+    />
   </Carousel>
 </div>
