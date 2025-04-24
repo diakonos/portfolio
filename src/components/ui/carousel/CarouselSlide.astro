@@ -1,0 +1,18 @@
+---
+const { class: className = "", ...props } = Astro.props;
+---
+
+<div
+  {...props}
+  class={`slide shrink-0 snap-center w-full lg:w-auto ${className}`}
+>
+  <slot />
+</div>
+
+<style>
+  @media (width >= 64rem) {
+    .slide {
+      max-width: calc(100% - var(--spacing) * 20);
+    }
+  }
+</style>
